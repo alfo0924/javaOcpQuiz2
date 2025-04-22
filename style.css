@@ -1,0 +1,187 @@
+/* 基本樣式與扁平化設計原則 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9; /* 淡雅背景色 */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 讓內容從頂部開始 */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff; /* 白色卡片背景 */
+    border-radius: 8px; /* 輕微圓角 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 細微陰影增加層次 */
+    padding: 30px;
+    width: 100%;
+    max-width: 800px; /* 限制最大寬度以提高可讀性 */
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #2c3e50; /* 深藍灰色標題 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 問題區塊樣式 */
+.question-block {
+    background-color: #ecf0f1; /* 淺灰色背景區分問題 */
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border-left: 5px solid #3498db; /* 左側藍色邊框標示 */
+}
+
+.question-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #34495e; /* 較深的灰色文字 */
+}
+
+.options label {
+    display: block; /* 每個選項佔一行 */
+    background-color: #ffffff;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #bdc3c7; /* 淺灰色邊框 */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.options label:hover {
+    background-color: #e9f5ff; /* 滑鼠懸停效果 */
+    border-color: #3498db;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* 按鈕樣式 (扁平化) */
+.btn {
+    display: block; /* 按鈕獨佔一行 */
+    width: 100%;
+    background-color: #3498db; /* 主題藍色 */
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9; /* 滑鼠懸停加深顏色 */
+}
+
+/* 結果顯示樣式 */
+.results-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.score {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2ecc71; /* 綠色表示成功 */
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.error-analysis {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px dashed #ddd;
+}
+.error-analysis h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #e74c3c; /* 紅色提示 */
+}
+.error-analysis ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.error-analysis li {
+    margin-bottom: 5px;
+}
+
+
+#detailed-results .result-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#detailed-results .correct {
+    background-color: #e8f8f5; /* 淡綠色背景表示正確 */
+    border-left: 5px solid #2ecc71; /* 左側綠色邊框 */
+}
+
+#detailed-results .incorrect {
+    background-color: #fdedec; /* 淡紅色背景表示錯誤 */
+    border-left: 5px solid #e74c3c; /* 左側紅色邊框 */
+}
+
+#detailed-results .result-item p {
+    margin: 5px 0;
+}
+
+#detailed-results .result-item strong {
+    color: #333;
+}
+
+#detailed-results .explanation {
+    font-style: italic;
+    color: #555;
+    margin-top: 8px;
+    font-size: 0.9em;
+    background-color: #f8f9f9;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+#restart-btn {
+    background-color: #95a5a6; /* 中性灰色 */
+    margin-top: 20px;
+}
+#restart-btn:hover {
+    background-color: #7f8c8d;
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .btn {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}
