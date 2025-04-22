@@ -7,25 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <h1>Java OCP 1Z0-819 模擬測驗</h1>
-
-    <div id="quiz-results" class="results-container" style="display: none;">
-        <h2>測驗結果</h2>
-        <div id="score" class="score"></div>
-        <div id="error-analysis" class="error-analysis"></div>
-        <h3>詳細結果：</h3>
-        <div id="detailed-results"></div>
-        <button id="restart-btn" class="btn">重新測驗</button>
+<header>
+    <div class="container">
+        <h1>Java OCP 1Z0-819 測驗</h1>
+        <p>本測驗包含 34 題選擇題，測試您對 Java SE 11 開發者認證的理解</p>
     </div>
+</header>
 
-    <form id="quiz-form">
-        <div id="quiz-content">
-            <!-- 問題將由 JavaScript 動態載入 -->
+<main class="container">
+    <section id="score-section" class="hidden">
+        <div class="score-card">
+            <h2>測驗結果</h2>
+            <div class="score-display">
+                <span id="score">0</span>/<span id="total-questions">34</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+            <div id="score-percentage">0%</div>
+            <div id="analysis"></div>
         </div>
-        <button type="submit" id="submit-btn" class="btn">提交答案</button>
-    </form>
-</div>
+        <button id="retry-btn" class="btn">重新測驗</button>
+    </section>
+
+    <section id="quiz-section">
+        <div id="question-counter">問題 <span id="current-question">1</span>/34</div>
+        <div id="quiz-container"></div>
+        <div class="quiz-controls">
+            <button id="prev-btn" class="btn btn-secondary" disabled>上一題</button>
+            <button id="next-btn" class="btn">下一題</button>
+            <button id="submit-btn" class="btn btn-primary hidden">提交答案</button>
+        </div>
+    </section>
+
+    <section id="results-section" class="hidden">
+        <h2>詳細結果</h2>
+        <div id="results-container"></div>
+        <button id="back-to-top" class="btn">回到頂部</button>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 Java OCP 測驗網站 | 為 Java SE 11 開發者認證準備</p>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
